@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+label {
+  font-size: 12px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+button:focus, input:focus {
+    outline:0;
+}
+
+.button {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #4479B3;
+  box-shadow: 0 1px 3px 1px rgba(60,64,67,.16);
+  color: #4479B3;
+  font-size: 15px;
+  height: 30px;
+  line-height: 1px;
+}
+
+button:active {
+  color: #fff;
+  background-color: #4479B3;
+}
