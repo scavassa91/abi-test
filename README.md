@@ -2,7 +2,7 @@
 
 ## App Setup
 
-Make sure your are into the **root app folder**.
+Make sure you are into the **root app folder**.
 
 ### Stating app
 
@@ -12,11 +12,11 @@ To start the app be sure to have installed [NodeJS and npm](https://nodejs.org/)
 
 `$ npm --version`
 
-After that you can install all the dependencies of the project executing:
+After that, you can install all the dependencies of the project executing:
 
 `$ npm install` or `$ yarn` (if you have *yarn* installed)
 
-Than finally you can start the app using the following command:
+Then finally you can start the app using the following command:
 
 `$ npm run start` or `$yarn start`
 
@@ -29,7 +29,7 @@ To run unit tests you just need to run this command:
 
 ## Docker setup
 
-Make sure your are into the **root app folder**.
+Make sure you are into the **root app folder**.
 
 ### Startgin app with docker
 
@@ -41,7 +41,7 @@ If every thing is ok you can run the following commands:
 
 `$ docker build -t danilo-scavassa/abi-test .`
 
-`docker run -p 3000:3000 -d danilo-scavassa/abi-test`
+`$ docker run -p 3000:3000 -d danilo-scavassa/abi-test`
 
 ### Starting app with docker-compose
 
