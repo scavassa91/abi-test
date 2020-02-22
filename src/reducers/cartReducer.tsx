@@ -17,6 +17,7 @@ export function cartReducer(state = cartInitialState, action: CartActionTypes): 
         // Add the product into the cart and updates the cart total
         case ADD_PRODUCT:
             return {
+                ...state,
                 products: state.products.concat(action.payload),
                 total: state.total + parseFloat(action.payload.price) * action.payload.quantity
             };
@@ -24,13 +25,20 @@ export function cartReducer(state = cartInitialState, action: CartActionTypes): 
         // and updates the cart total
         case UPDATE_PRODUCT: {
             return {
+                ...state,
                 products: state.products.map(product => {
                     if (product.id === action.payload.id) {
-                        product.quantity = action.payload.quantity;
+                        return {
+                            ...product,
+                            quantity: action.payload.quantity
+                        };
                     }
                     return product;
                 }).filter(product => product.quantity !== 0),
                 total: state.products.reduce((total, product) => {
+                    if (product.id === action.payload.id) {
+                        return total + action.payload.quantity * parseFloat(product.price)
+                    }
                     return total + product.quantity * parseFloat(product.price)
                 }, 0)
             };
