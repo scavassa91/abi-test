@@ -1,6 +1,9 @@
 import React, { FunctionComponent, useState, FunctionComponentElement } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
+
 import { addProductAction, updateProductAction } from '../../actions/cartActions';
+
 import { ProductProps } from './ProductTypes';
 import { ReduxState } from '../../store/reduxStoreTypes';
 
@@ -55,6 +58,9 @@ const Card: FunctionComponent<{product: ProductProps}> = ({ product }) => {
 
     return (
         <div className="Product">
+            <Link to={`/edit/${product.id}`}>
+                <img className="editImg" alt="edit" src={`${process.env.PUBLIC_URL}/assets/images/edit.svg`} />
+            </Link>
             <div className="productInformation">
                 <img className="productImage" src={product.imageURL} alt={product.name} />
                 <h3>{product.name}</h3>

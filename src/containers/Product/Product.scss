@@ -7,6 +7,7 @@
     margin: 0 .75rem;
     min-width: 250px;
     padding: 0 1rem 1rem;
+    position: relative;
 
     .productInformation {
         display: flex;
@@ -72,5 +73,14 @@
     .recycleImg {
         margin-left: 5px;
         width: 10px
+    }
+
+    .editImg {
+        height: 20px;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 20px;
+        cursor: pointer;
     }
 }

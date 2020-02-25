@@ -1,0 +1,49 @@
+@media only screen and (min-width: 1100px) {
+    .products {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .products {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 850px) {
+    .products {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media only screen and (max-width: 560px) {
+    .products {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .ProductList {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 1rem;
+  
+    .sortItems {
+      margin-bottom: 20px;
+  
+      .button:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+      .button:last-child {
+        border-radius: 0px 5px 5px 0;
+      }
+      .button.active {
+        background-color: #4479B3;
+        color: #fff;
+      }
+    }
+  
+    .products {
+      display: grid;
+    }
+  }
